@@ -7,7 +7,7 @@ var time = new Date();
 
     autosize: false,
 
-    width: 600,
+    width: 580,
 
     height: 400,
 
