@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel</title>
+    <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="flex-column">
+    <div class="flex-row">
+      <div class="tri-kiri">
+        <div class="card-header">
+          <h2>YAW</h2>
+        </div>
+        <div class="card-body" id="yaw"></div>
+      </div>
+      <div class="tri-kiri">
+        <div class="card-header">
+          <h2>PITCH</h2>
+        </div>
+        <div class="card-body" id="pitch"></div>
+      </div>
+      <div class="tri-kiri">
+        <div class="card-header">
+          <h2>ROLL</h2>
+        </div>
+        <div class="card-body" id="roll"></div>
+      </div>
+    </div>
+    <div class="coloumn-kanan">
+      <div class="flex-coulumn">
+        <div class="card-kanan">
+          <div class="card-header">
+            <h2>PRESSURE</h2>
+            
+          </div>
+          <div id="pressure"></div>
+        </div>
+        
+        <div class="card-kanan">
+          <div class="card-header">
+            <h2>TEMPERATURE</h2>
+          </div>
+          <div id="temperature"></div>
+        </div>
+      </div>
+      <div class="flex-coulum">
+        <div class="card-kanan">
+          <div class="card-header">
+            <h2>ALTITUDE</h2>
+          </div>
+          <div id="altitude"></div>
+        </div>
+        <div class="card-kanan">
+          <div class="card-header">
+            
+            <h2>STATUS</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <!-- <div class="flex-column">
+      <div class="coba" id="yaw"></div>
+      <div class="coba" id="pitch"></div>
+      <div class="coba" id="roll"></div>
+  </div> -->
+  <script src="script.js"></script>
+  <script src="dummy-socket/index.js"></script>
+  <script src="dummy-socket-client/index.js"></script>
+  <script src="yaw.js"></script>
+  <script src="pitch.js"></script>
+  <script src="roll.js"></script>
+  <script src="altitude.js"></script>
+  <script src="temperature.js"></script>
+  <script src="pressure.js"></script>
+</body>
+</html>
