@@ -1,6 +1,10 @@
-function rand() {
-    return Math.random();
+let a;
+
+function randyaw() {
+    a = Number((Math.random() * 360 - 180).toFixed(2));
+    return a;
 }
+
 yaw = document.getElementById('yaw');
 var time = new Date();
     var layout = {
@@ -25,7 +29,7 @@ var time = new Date();
 };
 var data = [{
     x: [time], 
-    y: [rand],
+    y: [randyaw],
     mode: 'lines',
     line: {color: '#80CAF6'}
 }]
@@ -40,7 +44,7 @@ var interval = setInterval(function() {
     
     var update = {
     x:  [[time]],
-    y: [[rand()]]
+    y: [[randyaw()]]
     }
     
     var olderTime = time.setMinutes(time.getMinutes() - 1);
@@ -55,5 +59,5 @@ var interval = setInterval(function() {
     
     Plotly.relayout(yaw, minuteView);
     Plotly.extendTraces(yaw, update, [0])
-    
+    console.log(a);
 }, 1000);

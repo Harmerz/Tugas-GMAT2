@@ -1,5 +1,7 @@
-function rand() {
-    return Math.random();
+let d;
+function randpressure() {
+    d = (Math.random() * 100).toFixed(2);
+    return d;
 }
 pressure = document.getElementById('pressure');
 var time = new Date();
@@ -31,7 +33,7 @@ var time = new Date();
 };
 var data = [{
     x: [time], 
-    y: [rand],
+    y: [randpressure],
     mode: 'lines',
     line: {color: '#80CAF6'}
 }]
@@ -46,7 +48,7 @@ var interval = setInterval(function() {
     
     var update = {
     x:  [[time]],
-    y: [[rand()]]
+    y: [[randpressure()]]
     }
     
     var olderTime = time.setMinutes(time.getMinutes() - 1);

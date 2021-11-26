@@ -1,5 +1,7 @@
-function rand() {
-    return Math.random();
+let c;
+function randpitch() {
+    c = (Math.random() * 360 - 180).toFixed(2);
+    return c;
 }
 pitch = document.getElementById('pitch');
 var time = new Date();
@@ -27,7 +29,7 @@ var layout = {
 };
 var data = [{
     x: [time], 
-    y: [rand],
+    y: [randpitch],
     mode: 'lines',
     line: {color: '#80CAF6'}
 }]
@@ -42,7 +44,7 @@ var interval = setInterval(function() {
     
     var update = {
     x:  [[time]],
-    y: [[rand()]]
+    y: [[randpitch()]]
     }
     
     var olderTime = time.setMinutes(time.getMinutes() - 1);
