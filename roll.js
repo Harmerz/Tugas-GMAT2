@@ -27,6 +27,7 @@ var layout = {
 
     // },
 };
+let isianroll;
 var data = [{
     x: [time], 
     y: [randroll],
@@ -41,10 +42,10 @@ var cnt = 0;
 var interval = setInterval(function() {
     
     var time = new Date();
-    
+    isianroll = randroll();
     var update = {
     x:  [[time]],
-    y: [[randroll()]]
+    y: [[isianroll]]
     }
     
     var olderTime = time.setMinutes(time.getMinutes() - 1);
@@ -58,6 +59,7 @@ var interval = setInterval(function() {
         };
     
     Plotly.relayout(roll, minuteView);
-    Plotly.extendTraces(roll, update, [0])
+    Plotly.extendTraces(roll, update, [0]);
+    document.getElementById("angkaroll").innerHTML = isianroll;
     
 }, 1000);

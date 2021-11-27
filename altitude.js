@@ -1,6 +1,6 @@
 let f;
 function randaltitude() {
-    f =(Math.random() * 100).toFixed(2);
+    f = (Math.random() * 100).toFixed(2);
     return f;
 }
 altitude = document.getElementById('altitude');
@@ -31,6 +31,7 @@ var time = new Date();
 // plot_bgcolor: '#c7c7c7'
 
 };
+let isianaltitude;
 var data = [{
     x: [time], 
     y: [randaltitude],
@@ -45,10 +46,10 @@ var cnt = 0;
 var interval = setInterval(function() {
     
     var time = new Date();
-    
+    isianaltitude = randaltitude();
     var update = {
     x:  [[time]],
-    y: [[randaltitude()]]
+    y: [[isianaltitude]]
     }
     
     var olderTime = time.setMinutes(time.getMinutes() - 1);
@@ -62,6 +63,6 @@ var interval = setInterval(function() {
         };
     
     Plotly.relayout(altitude, minuteView);
-    Plotly.extendTraces(altitude, update, [0])
-    
+    Plotly.extendTraces(altitude, update, [0]);
+    document.getElementById("angkaaltitude").innerHTML = isianaltitude;
 }, 1000);

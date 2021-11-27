@@ -31,6 +31,7 @@ var time = new Date();
 // plot_bgcolor: '#c7c7c7'
 
 };
+let isiantemperature;
 var data = [{
     x: [time], 
     y: [randtemperature],
@@ -43,12 +44,12 @@ Plotly.newPlot(temperature, data, layout);
 var cnt = 0;
 
 var interval = setInterval(function() {
-    
+    isiantemperature = randtemperature();
     var time = new Date();
     
     var update = {
     x:  [[time]],
-    y: [[randtemperature()]]
+    y: [[isiantemperature]]
     }
     
     var olderTime = time.setMinutes(time.getMinutes() - 1);
@@ -62,6 +63,7 @@ var interval = setInterval(function() {
         };
     
     Plotly.relayout(temperature, minuteView);
-    Plotly.extendTraces(temperature, update, [0])
+    Plotly.extendTraces(temperature, update, [0]);
+    document.getElementById("angkatemperature").innerHTML = isiantemperature;
     
 }, 1000);

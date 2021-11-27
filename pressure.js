@@ -31,6 +31,7 @@ var time = new Date();
 // plot_bgcolor: '#c7c7c7'
 
 };
+let isian;
 var data = [{
     x: [time], 
     y: [randpressure],
@@ -45,10 +46,10 @@ var cnt = 0;
 var interval = setInterval(function() {
     
     var time = new Date();
-    
+    isian = randpressure();
     var update = {
     x:  [[time]],
-    y: [[randpressure()]]
+    y: [[isian]]
     }
     
     var olderTime = time.setMinutes(time.getMinutes() - 1);
@@ -62,6 +63,7 @@ var interval = setInterval(function() {
         };
     
     Plotly.relayout(pressure, minuteView);
-    Plotly.extendTraces(pressure, update, [0])
+    Plotly.extendTraces(pressure, update, [0]);
+    document.getElementById("angkapressure").innerHTML = isian;
     
 }, 1000);

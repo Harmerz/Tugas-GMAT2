@@ -21,7 +21,7 @@ body{
 }
 .card-header h2{
     margin : auto;
-    color: #4e73df !important;
+    color: #4e73df;
 }
 .card-kanan{/*4 tipe pressure, temp, altitude, battery*/
     background-color: white;
@@ -43,6 +43,17 @@ body{
 }
 .card-body{
     padding: 0px;
+}
+.ganti-warna{
+    color: black !important;
+}
+.battery{
+    display: flex;
+    flex-direction: row;
+}
+.isistatus div{
+    display: flex;
+    justify-content: center;
 }
 /* #altitude{
     padding : 2px;

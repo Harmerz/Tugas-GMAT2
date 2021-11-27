@@ -27,6 +27,7 @@ var layout = {
 
     // },
 };
+let isianpitch;
 var data = [{
     x: [time], 
     y: [randpitch],
@@ -41,10 +42,10 @@ var cnt = 0;
 var interval = setInterval(function() {
     
     var time = new Date();
-    
+    isianpitch = randpitch();
     var update = {
     x:  [[time]],
-    y: [[randpitch()]]
+    y: [[isianpitch]]
     }
     
     var olderTime = time.setMinutes(time.getMinutes() - 1);
@@ -58,6 +59,6 @@ var interval = setInterval(function() {
         };
     
     Plotly.relayout(pitch, minuteView);
-    Plotly.extendTraces(pitch, update, [0])
-    
+    Plotly.extendTraces(pitch, update, [0]);
+    document.getElementById("angkapitch").innerHTML = isianpitch;
 }, 1000);

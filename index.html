@@ -13,18 +13,21 @@
       <div class="tri-kiri">
         <div class="card-header">
           <h2>YAW</h2>
+          <h2 class="ganti-warna" id="angkayaw"></h2>
         </div>
         <div class="card-body" id="yaw"></div>
       </div>
       <div class="tri-kiri">
         <div class="card-header">
           <h2>PITCH</h2>
+          <h2 class="ganti-warna" id="angkapitch"></h2>
         </div>
         <div class="card-body" id="pitch"></div>
       </div>
       <div class="tri-kiri">
         <div class="card-header">
           <h2>ROLL</h2>
+          <h2 class="ganti-warna" id="angkaroll"></h2>
         </div>
         <div class="card-body" id="roll"></div>
       </div>
@@ -34,7 +37,7 @@
         <div class="card-kanan">
           <div class="card-header">
             <h2>PRESSURE</h2>
-            
+            <h2 class="ganti-warna" id="angkapressure"></h2>
           </div>
           <div id="pressure"></div>
         </div>
@@ -42,6 +45,7 @@
         <div class="card-kanan">
           <div class="card-header">
             <h2>TEMPERATURE</h2>
+            <h2 class="ganti-warna" id="angkatemperature"></h2>
           </div>
           <div id="temperature"></div>
         </div>
@@ -50,6 +54,8 @@
         <div class="card-kanan">
           <div class="card-header">
             <h2>ALTITUDE</h2>
+            <h2 class="ganti-warna" id="angkaaltitude"></h2>
+            <!-- <h2 id="angkaaltitude"></h2> -->
           </div>
           <div id="altitude"></div>
         </div>
@@ -57,6 +63,15 @@
           <div class="card-header">
             
             <h2>STATUS</h2>
+          </div>
+          <div class="isistatus">
+            <div>
+              <h2>TEAM ID : 0740</h2>
+            </div>
+            <div class="battery">
+              <h2>STATUS BATTERY : </h2>
+              <h2 id="batterai"></h2>
+            </div>
           </div>
         </div>
       </div>
@@ -68,7 +83,6 @@
       <div class="coba" id="pitch"></div>
       <div class="coba" id="roll"></div>
   </div> -->
-  <script src="script.js"></script>
   <script src="dummy-socket/index.js"></script>
   <script src="dummy-socket-client/index.js"></script>
   <script src="yaw.js"></script>
@@ -77,5 +91,6 @@
   <script src="altitude.js"></script>
   <script src="temperature.js"></script>
   <script src="pressure.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

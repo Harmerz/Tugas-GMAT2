@@ -27,6 +27,7 @@ var time = new Date();
 
     // },
 };
+let isianyaw;
 var data = [{
     x: [time], 
     y: [randyaw],
@@ -41,10 +42,10 @@ var cnt = 0;
 var interval = setInterval(function() {
     
     var time = new Date();
-    
+    isianyaw = randyaw();
     var update = {
     x:  [[time]],
-    y: [[randyaw()]]
+    y: [[isianyaw]]
     }
     
     var olderTime = time.setMinutes(time.getMinutes() - 1);
@@ -58,6 +59,6 @@ var interval = setInterval(function() {
         };
     
     Plotly.relayout(yaw, minuteView);
-    Plotly.extendTraces(yaw, update, [0])
-    console.log(a);
+    Plotly.extendTraces(yaw, update, [0]);
+    document.getElementById("angkayaw").innerHTML = isianyaw;
 }, 1000);
